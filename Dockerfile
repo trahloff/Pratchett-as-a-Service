@@ -9,6 +9,7 @@ COPY package.json /usr/src/app/
 RUN npm install --only=prod
 
 # Bundle app source
-COPY . /usr/src/app
+COPY components /usr/src/app
+COPY app.js /usr/src/app
 
 CMD [ "npm", "start" ]

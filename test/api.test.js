@@ -4,6 +4,8 @@ const should = chai.should()
 const path = require('path')
 const server = require(path.join(__dirname, '/../app'))
 
+'use strict'
+
 describe('REST', () => {
   it('should return a function as server', done => {
     server.should.be.a('function')

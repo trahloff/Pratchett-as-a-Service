@@ -1,3 +1,4 @@
+'use strict'
 const path = require('path')
 const api = require('express').Router()
 const quotes = require(path.join(__dirname, '/../pratchett.json'))

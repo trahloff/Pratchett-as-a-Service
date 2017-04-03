@@ -1,3 +1,4 @@
+'use strict'
 const app = require('express')()
 
 app.use('/quotes', require('./components/routes/quoteRoutes.js'))

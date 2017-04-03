@@ -6,7 +6,7 @@
     "main": "app.js",
     "scripts": {
         "start": "node app.js",
-        "test": "standard --fix && mocha",
+        "test": "standard --fix && mocha --throw-deprecation --check-leaks",
         "cover": "istanbul cover node_modules/mocha/bin/_mocha",
         "prepush": "npm test"
     },
@@ -15,7 +15,6 @@
     "dependencies": {
         "express": "4.14.0"
     },
-
     "devDependencies": {
         "chai": "3.5.0",
         "chai-http": "3.0.0",

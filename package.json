@@ -1,0 +1,33 @@
+{
+    "name": "Pratchett-as-a-Service",
+    "version": "1.0.0",
+    "repository": "https://github.com/trahloff/Pratchett-as-a-Service",
+    "description": "whalalalalala",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "standard --fix && mocha",
+        "cover": "istanbul cover node_modules/mocha/bin/_mocha",
+        "prepush": "npm test"
+    },
+    "author": ["Tobias Rahloff <rahloff@gmail.com>"],
+    "license": "GPL-3.0",
+    "dependencies": {
+        "express": "4.14.0"
+    },
+
+    "devDependencies": {
+        "chai": "3.5.0",
+        "chai-http": "3.0.0",
+        "debug": "2.6.1",
+        "husky": "0.13.1",
+        "istanbul": "0.4.5",
+        "mocha": "3.2.0",
+        "standard": "8.6.0"
+    },
+    "standard": {
+        "ignore": [
+            "**/test/**"
+        ]
+    }
+}

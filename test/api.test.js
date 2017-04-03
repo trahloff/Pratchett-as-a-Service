@@ -6,13 +6,13 @@ const server = require(path.join(__dirname, '/../app'))
 
 'use strict'
 
-  it('should return a function as server', done => {
-    server.should.be.a('function')
-    done()
-  })
+it('should return a function as server', done => {
+  server.should.be.a('function')
+  done()
+})
 
-  it('GET /quotes should return single random quote', done => {
-    chai.request(server)
+it('GET /quotes should return single random quote', done => {
+  chai.request(server)
         .get('/quotes')
         .end((err, res) => {
           ;(err === null).should.be.true
@@ -21,10 +21,10 @@ const server = require(path.join(__dirname, '/../app'))
           res.body.result.should.be.a('string')
           done()
         })
-  })
+})
 
-  it('GET /quotes?contains=having should return an array and contain a quote', done => {
-    chai.request(server)
+it('GET /quotes?contains=having should return an array and contain a quote', done => {
+  chai.request(server)
         .get('/quotes?contains=having')
         .end((err, res) => {
           ;(err === null).should.be.true
@@ -34,4 +34,4 @@ const server = require(path.join(__dirname, '/../app'))
           res.body.result[0].should.be.a('string')
           done()
         })
-  })
+})

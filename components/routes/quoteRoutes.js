@@ -4,13 +4,9 @@ const api = require('express').Router()
 const quotes = require(path.join(__dirname, '/../pratchett.json'))
 
 function searchQuotes (searchStr) {
-  const arr = []
-  for (let i = 0; i < quotes.length; i++) {
-    if (quotes[i].indexOf(searchStr) !== -1) {
-      arr.push(quotes[i])
-    }
-  }
-  return arr
+  return quotes.filter(q => {
+    return q.indexOf(searchStr) !== -1
+  })
 }
 
 api.get('/', (req, res) => {

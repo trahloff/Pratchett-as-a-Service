@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json /usr/src/app/
-RUN npm install --only=prod
+RUN npm install --only=prod && npm cache clean
 
 # Bundle app source
 COPY components /usr/src/app

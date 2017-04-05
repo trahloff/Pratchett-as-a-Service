@@ -11,6 +11,12 @@ it('should return a function as server', done => {
   done()
 })
 
+it('should show Timon how to use Chai', done => {
+  const x = 10
+  x.should.be.eql(10)
+  done()
+})
+
 it('GET /quotes should return single random quote', done => {
   chai.request(server)
         .get('/quotes')
